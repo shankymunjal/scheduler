@@ -6,13 +6,6 @@ djangorestframework - Library to setup API related stuff in django framework
 gunicorn - App server
 django_heroku - To deploy in heroku
 
-APIs (Request and response body format is in Postman Collection)
-
-/api/v1/users/register - To create a new user
-/api/api-token-auth/ - To get token for the user, use credentials of the user that is being created in above API
-/api/v1/slots/ - To create new slots, this API will create slots equal to the number of hours difference between start and end_time
-/api/v1/slots/book - To book a slot. If start time of booking exactly matches with available slot then only it will book, otherwise throw an hour
-
 * There is no Authorization. So any user can create or book slots. Even slot can be booked by same user who has created.
 
 * API Testcases are in api/tests/ directory. To run the testcases need to run following command
