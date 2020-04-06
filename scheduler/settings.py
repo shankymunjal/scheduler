@@ -25,7 +25,7 @@ SECRET_KEY = '9-q(c2(oxbc^lpkg4ma72-#e-x_d5l6plf-itp4=gjxal2bh+b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dry-garden-80872.herokuapp.com']
 
 
 # Application definition
