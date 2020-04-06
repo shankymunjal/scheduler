@@ -16,7 +16,7 @@ class SlotView(views.APIView):
         if serializer.is_valid():
             serializer.save(created_by=request.user)
             return Response(serializer.data)
-        return Response(serializer.errors)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class BookSlotView(views.APIView):
