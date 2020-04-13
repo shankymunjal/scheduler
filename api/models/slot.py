@@ -22,3 +22,7 @@ class Slot(models.Model):
     class Meta:
         managed = True
         db_table = 'slot'
+
+    @classmethod
+    def get_by_user(cls, user_id):
+        return cls.objects.filter(booked_by_id=user_id, status=SlotStatus.BOOKED)

@@ -51,6 +51,11 @@ class SlotSerializer(BaseSlotSerializer):
         return start_time.replace(hour=start_time.hour + delta)
 
 
+class SlotViewSerializer(BaseSlotSerializer):
+    start_time = serializers.DateTimeField()
+    duration = serializers.CharField(default='1h')
+
+
 class BookSlotSerializer(BaseSlotSerializer):
     date = serializers.DateField()
     start_time = serializers.TimeField()
